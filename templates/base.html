@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" content="text/html" http-equiv="Content-Type">
+  <meta content="width=device-width,initial-scale=1" name='viewport'>
+  <title>2dcl | Decentraland's alternate 2d universe</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <link rel="stylesheet" href="{{ get_url(path='site.css') }}">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+  <section id="main">
+    <header>
+        <div class='logo-wrapper'>
+          <img src='logo.png' alt="2dcl logo" />
+        </div>
+        <h1>2dcl</h1>
+    </header>
+  </section>
+
+  <section id="content">
+  {% block content %} {% endblock %}
+  </section>
+
+  <footer>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://discord.gg/sjGBp9w3yW">Discord</a></li>
+      <li><a href="https://governance.decentraland.org/proposal/?id=1959b490-f726-11ec-805c-77efd746e6b7">Grant & Updates</a></li>
+      <li><a href="https://github.com/2dcl">GitHub</a></li>
+    </ul>
+    <section class='privacy'>
+        Our website's privacy policy is simple:
+        <ul>
+          <li>We don't track you.</li>
+          <li>We don't store your data.</li>
+        </ul>
+      </section>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+@font-face
+    font-family: 'pixel'
+    src: url('fonts/pixellari.ttf'), local('Monaco'), local(monospace)
+    font-style: normal
+    font-weight: normal
+    text-rendering: optimizeLegibility
+    font-display: swap
+
+$white: #fff
+$text: #16141a
+$black: #19131a
+$blue: #27213D
+$cream: #fdf4e0
+
+$red: #ff2d55
+$green: #00B959
+
+$background: $white
+$header: $red
+$main-color: $black
+$main-color-dark: $cream
+
+$link-color: $main-color
+$link-color-dark: $main-color-dark
+
+=mobile
+  @media screen and (max-width: #{768px - 1})
+    @content
+
+=dark
+  @media (prefers-color-scheme: dark)
+    @content
+
+body
+  margin: 0
+  background-color: $background
+  color: $main-color
+  width: 50vw
+  +mobile
+    width: calc(100vw - 2rem)
+    padding: 0 1rem
+  margin: 0 auto
+  font-family: "pixel", "Monaco", "Andalé Mono", "Courier", "Lucida Console", monospace
+
+h1, h2, h3
+  color: $header
+  font-family: 'pixel'
+  margin: 0
+a
+  padding: 0.2rem
+  color: $link-color
+  +dark
+    color: $link-color-dark
+
+a:visited
+  color: $link-color
+  +dark
+    color: $link-color-dark
+
+#blog-articles
+  a
+    text-decoration: none
+    color: $background
+    background-color: $main-color
+    padding: 0.2rem
+
+  a:visited
+    color: $background
+
+#main
+  margin: 1rem 0
+  header
+    display: grid
+    grid-template-columns: 120px 1fr
+    align-content: center
+    justify-content: middle
+    gap: 1rem
+    h1
+      display: inline-block
+      font-size: 3rem
+      line-height: 2.5rem
+      word-spacing: 100vw
+    .logo-wrapper
+      display: inline-block
+      img
+        width: 120px
+    .logo
+      fill: $main-color
+      +dark
+        fill: $main-color-dark !important
+    h1
+      align-self: center
+
+
+#content
+  min-height: 50vh
+
+#games
+  li
+    list-style-type: none
+.links
+  display: inline-block
+  +mobile
+    display: block
+
+  padding: 0
+  list-style-type: none
+  &:before
+    content: "["
+  &:after
+    content: "]"
+  li
+    display: inline-block
+    +mobile
+      margin-bottom: 0.5rem
+    &:last-child:after
+      content: ""
+    &:after
+      content: "|"
+
+footer
+  margin-top: 1rem
+  border-top: 0.5rem solid $main-color
+  +dark
+    border-color: $main-color-dark
+
+  .privacy
+    font-size: 0.7rem
+
+li
+  margin-bottom: 0.5rem
