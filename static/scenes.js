@@ -5,6 +5,11 @@ async function updateList() {
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
     .then(data => {
+      console.log(data);
+      let buildDate = data.getElementsByTagName('lastBuildDate')[0];
+      let lastBuildDate = document.getElementById('last-build-date');
+      lastBuildDate.textContent = buildDate.textContent;
+
       let items = data.getElementsByTagName('item');
       let table = document.getElementById('scene-table');
 
