@@ -6,6 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dcl-common = { path = "../../2dcl/dcl-common" }
+dcl-common = { git = "https://github.com/2dcl/2dcl.git", branch = "animation-refactor" }
+catalyst = { git = "https://github.com/2dcl/2dcl.git", branch = "animation-refactor" }
+dcl2d-ecs-v1 = { git = "https://github.com/2dcl/2dcl.git", branch = "animation-refactor" }
 rss = "2.0.6"
 chrono = "0.4.26"
+indicatif = "0.17.6"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
