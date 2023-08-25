@@ -1,0 +1,4 @@
+#!/bin/bash
+cd scene-finder
+cargo build --release
+cargo run -- ../static/scenes.rss
