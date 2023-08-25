@@ -148,8 +148,12 @@ table
 
   tr:nth-child(even) 
     background: #EEE
+    +dark
+      background: #333
   tr:nth-child(odd)
     background: $white
+    +dark
+      background: $black
   tr:nth-child(1)
     background: $header !important
     color: $background
